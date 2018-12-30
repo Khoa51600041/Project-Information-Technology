@@ -1,0 +1,402 @@
+@import url('http://fonts.googleapis.com/css?family=Poppins:400,500,700');
+/*This part is fit with width = 1920x1080*/
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+        font-family: 'Poppins', sans-serif;
+        color: #222;
+    }
+    /******************Navigation-header-top*******************/
+    #header-top {
+        background: #D83535;
+		width: 100%;
+    }
+
+    /*
+    .search-box {
+        position: absolute;
+        top: 50%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+        height: 60px;
+        background:#2f3640;
+        border-radius: 40px;
+        padding: 10px;
+    }
+
+    .search-box:hover > .search-txt {
+        width: 240px;
+        padding: 0px 6px;
+    }
+
+    .search-box:hover > .search-btn {
+        background: white;
+    }
+    .search-btn {
+        color: #e84118;
+        float: right;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #2f3640;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s;
+    }
+    .search-txt {
+        border: none;
+        background: none;
+        outline: none;
+        float: left;
+        padding: 0;
+        color: white;
+        font-size: 16x;
+        transition: 0.4s;
+        line-height: 40px;
+        width: 0px;
+    }
+*/
+.nav-link:hover {
+        background-color: #D83535;
+    }
+
+    .nav-item ul{
+        position: absolute;
+        min-width: 200px;
+        background-color: #D83535;
+        display: none; 
+    }
+
+    .nav-item ul li {
+        display: block;
+        background-color: #D83535;
+    }
+
+    ul li:hover ul {
+          display: block;
+    }
+    .navbar {
+        padding: .8Rem;
+        /*(1em = 16px;)*/
+    }
+
+    .navbar-nav li {
+        padding-right: 20px;
+    }
+
+	#navbarResponsive {
+		width: 100%;
+	}
+    .nav-link {
+        font-size: 1.2em !important;
+    }
+    /******************Social****************/
+    .social a {
+        font-size: 4.5em;
+        padding: 3rem;
+    }
+
+    .fa-facebook {
+        color: #3b5998;
+    }
+
+    .fa-twitter {
+        color: #00aced;
+    }
+
+    .fa-instagram {
+        color: #517fa4;
+    }
+
+    .fa-facebook:hover,
+    .fa-twitter:hover,
+    .fa-instagram:hover {
+        color: #d5d5d5;
+    }
+    /******************Footer****************/
+    #footer_1 {
+        background-color: #0F67B7;
+        color: #d5d5d5;
+        padding-top: 2rem;
+    }
+
+    hr.light {
+        border-top: 1px solid #d5d5d5;
+        width: 75%;
+        margin-top: .8rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer a {
+        color: #d5d5d5;
+    }
+
+    .col-sm-4 {
+        margin: auto;
+        padding: -15px;
+    }
+
+    #footer_1 img {
+        margin-left: 56px;
+    }
+
+    hr.light-100 {
+        border-top: 1px solid #d5d5d5;    
+        width: 100%;
+        margin-top: .8rem;
+        margin-bottom: 1rem;
+    }
+    .single {
+        width: 70%;
+        margin-left: 55px;
+    }
+
+    #rowProduct .col-lg-3 {
+        margin: 4.1%;
+        padding: -50%;
+    }
+/*This part is end of with width = 1920x1080*/
+
+
+
+/*******************Responsive***************/
+@media (max-width: 1440px) {
+    .navbar {
+        width: 100.5%;
+    }
+    #navbarResponsive {
+        font-size: 20px
+    }
+    
+    #footer_1 img {
+        margin-left: 40px;
+        width: 20%;
+    }
+    .copyRight {
+        font-size: 90%;
+    }
+    #brand_intro .row .col-lg-4 {
+        font-size: 90%;
+    }
+}
+@media (max-width: 1366px) {
+    #header-top {
+        margin-left: 4px;
+    }
+    .navbar {
+        width: 101%;
+    }
+    #navbarResponsive {
+        font-size: 18px
+    }
+    .carousel-inner  img{
+        width: 100%;
+        height: auto;
+        margin-left: 20px;
+    }
+    #brand_intro .row .col-lg-4{
+        font-size: 90%;
+    } 
+    
+}
+
+@media (max-width: 1024px) {
+    .navbar {
+        width: 100%;
+    }
+    #navbarResponsive {
+        font-size: 14px
+    }
+    .carousel-inner  img{
+        width: 110%;
+        height: auto;
+        margin-left: 10px;
+    }
+    
+    #brand_intro .row .col-lg-4{
+        font-size: 80%;
+    } 
+    .social a {
+        font-size: 4em;
+        padding: 2rem;
+    }
+
+    .carousel-inner img {
+        width: 96.8%;
+        height: 90%;
+        margin-left: 20px;
+    }
+    
+    .carousel-caption {
+        margin-top: 30px;
+    }
+    .carousel-caption h1 {
+        font-size: 450%;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 15px #000;
+    }
+    #footer_1 img {
+        margin-left: 26px;
+        width: 15%;
+    }
+    
+    .col-lg-4 .brandParagraph {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        font-size: 13px;
+        line-height: 20px;
+    }
+    #text-form {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 992px) {
+    #header-top {
+        width: 100%;
+        margin-left: -1px
+    }
+    .social a {
+        font-size: 4em;
+        padding: 2rem;
+    }
+
+    .carousel-inner img {
+        width: 96.8%;
+        height: 90%;
+        margin-left: 16px;
+    }
+    
+    .card-title-gear {
+        font-size: 20px;
+    }
+    
+    #brandSolgan{
+        font-size: 30px;
+    }
+    
+    .brandParagraph_2 {
+        margin-bottom: 17px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    
+    html {
+        width: 100%;
+    }
+    
+    input[type=text] {
+        width: 100%;
+        border-radius: 5px;
+        padding: 10px;
+    }
+    
+    input[type=submit] {
+        border-radius: 5px;
+        width: 100%;
+        position: static;
+        margin-top: 5px;
+        padding: 10px;
+    }
+    #navbarResponsive {
+        font-size: 7.9px;
+        margin: 0px 1px;
+    }
+    .social a {
+        font-size: 2em;
+        padding: 1.2rem;
+    }
+    footer {
+        width: 100%;
+    }
+    #footer_1 img {
+        margin-left: 20px;
+    }
+    
+    #footer_1 .text-center .col-md-3  {
+        font-size: 80%;
+    }
+    
+    #footer_1 .text-center .col-md-3 .footer-text {
+        font-size: 15px;
+    }
+    #footer_1 #text .single .footer_text {
+        font-size: 160%;
+        margin-left:-50px
+    }
+    
+    #footer_1 #text .single .input-group{
+        margin-left: -40px;
+        width: 140px;
+    }
+    
+    #footer_1 #text .single .input-group .form-control{
+        font-size: 12px;
+        padding: 0px 10px;
+    }
+    
+    #footer_1 .text-center .col-12 .light-100 {
+        margin-top: 10px;
+    }
+    #footer_1 .text-center .col-12 .copyRight {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    #header-top{
+        width: 100%;
+        padding-right: 10px;
+        margin-left: 10px;
+    }
+    
+    #navbarResponsive {
+        margin-left: 30px;
+    }
+    .navbar-nav {
+        font-size: 20px;
+    }
+    .carousel img {
+        padding-right: 22px;
+        margin-left: 25px;
+    }
+    .carousel-caption {
+        top: 40%;
+    }
+
+    .carousel-caption h1 {
+        font-size: 150%;
+    }
+
+    .carousel-caption .btn {
+        font-size: 95%;
+        padding: 4px 8px;
+    }
+}
+
+@media (max-width: 425px){
+    #footer_1 img{
+        width: 75%;
+        margin-left: 47px;
+    }
+    
+    #footer_1 #text .single .footer_text {
+        font-size: 160%;
+        margin-left: 0px
+    }
+    
+    #footer_1 #text .single .input-group{
+        margin-left: 0px;
+        width: 100%;
+    }
+    
+    #footer_1 #text .single .input-group .form-control{
+        font-size: 18px;
+        padding: 0px 10px;
+    }
+
+}
