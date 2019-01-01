@@ -1,4 +1,6 @@
 		<?php
+			$con = mysqli_connect("localhost","root","","quanlydoan");
+			mysqli_set_charset($con, 'UTF8');
 			$result = mysqli_query($con, "SELECT * from de_tai");
 			while ($data = mysqli_fetch_array($result)){
 				
@@ -14,15 +16,15 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form action="adddangky.php" method="post">
+                        <form<!--action="adddangky.php" method="post"-->
                             <p class="input-group-addon">Nhập Mã Số Sinh Viên</p>
                             <div class="form-group">
                                 <div class="input-group">
-                                    <input type="text" name="search_text" id="search_text" placeholder="mã số sinh viên" class="form-control search_text" />
+                                    <input type="text" name="search_text" id="search_text<?php echo $data['id'];?>  placeholder="mã số sinh viên" class="form-control search_text" />
                                 </div>
                             </div>
                             <div id="add-list"></div>
-                            <button type="button" onclick="memory()" id="<?php echo $data['id']; ?>" class="btn btn-primary them" style="float: right;">Thêm</button>
+                            <button type="button" id="<?php echo $data['id']; ?>" class="btn btn-primary them" style="float: right;">Thêm</button>
                             <div id="result"></div>
                             
                         </form>

@@ -6,6 +6,7 @@
     if (mysqli_connect_errno()) {
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
     }
+	
 ?>
 
 
@@ -72,12 +73,13 @@
 </head>
 
 <body>
+	<div id="kiemtrathu"> o day </div>
     <div class="container-">
         <!-- Header-->
         <?php
 			require('header.php');
+			
 		?>
-
         <!-- Side Menu-->
         <div class="sidenav">
             <a href="#" id="showHomepage"><i class="fas fa-home"></i> TRANG CHỦ</a>
@@ -106,19 +108,20 @@
         </div>
 
         <!-- Modal -->
-			<?php
-				require('modal.php');
-			?>
+				<?php
+					require('modal.php');
+				?>
     </div>
 </body>
 </html>
 
 <script>
+	
     var search;
     var index = 0;
     var mang_sinh_vien =  new Array();
     $(document).ready(function(){
-        
+    load_dsdangky(id);    
         function load_data(query) {
             $.ajax({
                 url:"fetch.php",
@@ -137,31 +140,114 @@
             if(search != '') {
                 load_data(search);
                 $(this).val() = "";
-            }else {
+            } else {
                 load_data('');
                 $('#result');
             }
         }); 
     });
 	
-	$(document).on('click','.them', function(){
-		var id = $(this).attr("id");
-		var maDT = $('#maDT'+id).val(); //lưu tên chứa trong hidden input có id #name + id sản phẩm
+	function load_dsdangky(id) {
 		
 		$.ajax({
 			
 			url:"adddangky.php",
 			method:"POST",
-			data:{maDT:maDT},
-			success: function(){
-				alert("success");
+			dataType: "json",
+			success: function(data){
 				
+				$("#result_return"+id).html(data.mssv);
+				
+			},
+			error: function(){
+				
+			alert("error");
+			
+			}
+			
+		});
+			
+	}
+	
+	
+	
+	$(document).on('click','.them', function(){
+		var id = $(this).attr("id");
+		var maDT = $('#maDT'+id).val(); //lưu tên chứa trong hidden input có id = id cua button
+		var maSV = $('.search_text').val(); //lưu tên chứa trong hidden input có id = id cua button
+		var action = "add";
+		
+
+		$.ajax({
+			
+			url:"action.php",
+			method:"POST",
+			//dataType: "json",
+			data:{maDT:maDT, maSV:maSV,action:action},
+			success: function(data){
+				
+				load_dsdangky(id);
+				alert("success");				
+				
+			},
+			error: function(){
+				
+			alert("error");
+			
 			}
 			
 		});
 		
 	});
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/*$(document).on('click','.them', function(){
+		var id = $(this).attr("id");
+		var maDT = $('#maDT'+id).val(); //lưu tên chứa trong hidden input có id = id cua button
+		var maSV = $('.search_text').val(); //lưu tên chứa trong hidden input có id = id cua button
+		var action = "add";
+		
+
+		$.ajax({
+			
+			url:"adddangky.php",
+			method:"POST",
+			dataType: "json",
+			data:{maDT:maDT, maSV:maSV,action:action},
+			success: function(data){
+				
+				$("#result_return"+id).html(data.mssv);
+				
+			},
+			error: function(){
+				
+			alert("error");
+			
+			}
+			
+		});
+		
+	});*/
+
     /*
     function memory() {
         var query = search;
