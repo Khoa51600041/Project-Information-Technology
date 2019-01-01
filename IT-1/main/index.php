@@ -11,19 +11,14 @@
     }
     $user_data = $_SESSION['userData'];
 
-    $user_name = '1';
+    $user_name = '';
     if(isset($_SESSION['gv'])){
         $user_name = $user_data['tenGV'];
-        unset($_SESSION['gv']);
     }
     if(isset($_SESSION['sv'])){
         $user_name = $user_data['tenSV'];
-        unset($_SESSION['sv']);
     }
 ?>
-
-
-
 
 <!doctype html>
 <html lang="en">
@@ -31,7 +26,7 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TRANG CHỦ</title>
     <!--CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -92,11 +87,23 @@
     <div class="container-">
         <!-- Header-->
         <div class="top-content">
-            <img src="images/logo/TĐT_logo.png" alt="TDT-logo">
-            <h1 id="top-title">ĐĂNG KÍ ĐỒ ÁN KHOA CÔNG NGHỆ THÔNG TIN</h1>
-            <div id="user-info">
-                <p id="user-name"><?php echo $user_name; ?></p>
-                <a href="http://localhost/IT-1/login/logout.php"><p id="icon-off"><i class="fas fa-power-off"></i></p></a> <!-- Fix trả về logout -->
+            <div class="row">
+                <div class="img-logo col-sm-2">
+                    <img src="images/logo/TĐT_logo.png" alt="TDT-logo">
+                </div>
+                <div class="col-sm-7">
+                    <h1 id="top-title">ĐĂNG KÍ ĐỒ ÁN KHOA CÔNG NGHỆ THÔNG TIN</h1>
+                </div>
+                <div class="col-sm-3">
+                    <div id="user-info">
+                        <span id="user-name"><?php echo $user_name; ?></span>
+                        <a href="http://localhost/IT-1/login/logout.php">
+                            <span id="icon-off">
+                                <i class="fas fa-power-off"></i>
+                            </span>
+                        </a> <!-- Fix trả về logout -->
+                    </div>
+                </div>
             </div>
             <hr id="hr-top-content">
         </div>
