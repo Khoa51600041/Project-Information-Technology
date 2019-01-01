@@ -1,9 +1,24 @@
 <?php
+    session_start();
     $con = mysqli_connect("localhost","root","","quanlydoan");
 
     // Check connection
     if (mysqli_connect_errno()) {
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
+    }
+    if(!isset($_SESSION['userData'])){
+        header("Location: ../login/index.php");
+    }
+    $user_data = $_SESSION['userData'];
+
+    $user_name = '1';
+    if(isset($_SESSION['gv'])){
+        $user_name = $user_data['tenGV'];
+        unset($_SESSION['gv']);
+    }
+    if(isset($_SESSION['sv'])){
+        $user_name = $user_data['tenSV'];
+        unset($_SESSION['sv']);
     }
 ?>
 
@@ -80,8 +95,8 @@
             <img src="images/logo/TĐT_logo.png" alt="TDT-logo">
             <h1 id="top-title">ĐĂNG KÍ ĐỒ ÁN KHOA CÔNG NGHỆ THÔNG TIN</h1>
             <div id="user-info">
-                <p id="user-name">Mạc Cự Đăng Khoa</p>
-                <a href="#"><p id="icon-off"><i class="fas fa-power-off"></i></p></a>
+                <p id="user-name"><?php echo $user_name; ?></p>
+                <a href="http://localhost/IT-1/login/logout.php"><p id="icon-off"><i class="fas fa-power-off"></i></p></a> <!-- Fix trả về logout -->
             </div>
             <hr id="hr-top-content">
         </div>
