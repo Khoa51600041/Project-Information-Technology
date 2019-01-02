@@ -24,7 +24,7 @@
 	if(!empty($_SESSION["dsdangky"])) {
 		$out ="";
 		foreach($_SESSION["dsdangky"] as $keys => $values) {
-				$out.= $values['maSV'];
+				$out.= $values['maSV']."<br>";
 		
 		}
 	}
@@ -34,7 +34,7 @@
 	}
 	$data = array(
         
-		'mssv'		=>	$out +"<br>"
+		'mssv'		=>	$out
 		
 	);
 		echo json_encode($data);
