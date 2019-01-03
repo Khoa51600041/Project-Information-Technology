@@ -21,17 +21,15 @@
         value('$maSV','$maDT',now(),'$maSV','1',now());");*/
 		
 		//$_SESSION['dsdk'] = $_POST['maSV'];
-	if(!empty($_SESSION["dsdangky"])) {
+
+		$search_dang_ky = mysqli_query($con, "SELECT * from dang_ky");
+		if (mysqli_num_rows($search_dang_ky) > 0){
 		$out ="";
-		foreach($_SESSION["dsdangky"] as $keys => $values) {
-				$out.= $values['maSV']."<br>";
-		
+		while ($data = mysqli_fetch_array($search_dang_ky)){
+				$out.= $data['maSV']."<a href='#'><i class='fas fa-minus-circle' id='".$data['maSV']."'></i></a><br>";
 		}
 	}
-	else{
-		$out='hello';
-		
-	}
+
 	$data = array(
         
 		'mssv'		=>	$out

@@ -1,93 +1,32 @@
 <?php
+	$con = mysqli_connect("localhost","root","","quanlydoan");
+	mysqli_set_charset($con, 'UTF8');
 session_start();
 if (isset($_POST['maSV'])){
 if (isset($_POST['action'])){
 		
 	if($_POST["action"] == "add") {
-		if(isset($_SESSION["dsdangky"])) { 
-			$is_available = 0;
 
-			foreach($_SESSION["dsdangky"] as $keys => $values) {
-				if($_SESSION["dsdangky"][$keys]['maSV'] == $_POST["maSV"]) { 
-					$is_available++;
-					//tăng số lượng lên 1;
-				}
-			}
-			if($is_available == 0) { 
-				$item_array = array(
-				
-					'maSV'               =>     $_POST["maSV"]
+			$dangky_detai = mysqli_query($con, "INSERT INTO dang_ky(maSV, maDT, ngayDK, maNhom, ttDK, ngayTT) 
+			value($_POST[maSV],$_POST[maDT],now(),$_POST[maSV],'1',now());");	
+			
+			//$deletedk = mysqli_query($con, "DELETE FROM dang_ky WHERE maSV ='51600022' ");
 
-					);
-				$_SESSION["dsdangky"][] = $item_array; 
-			}
+	}	
+	//if (isset($_POST['del_id'])){
+		if($_POST["action"] == 'delete') { 
+			//foreach($_SESSION["dsdangky"] as $keys => $values) {
+				//$maSV = $_POST['del_id'];				
+					$deletedk = mysqli_query($con, "DELETE FROM dang_ky WHERE maSV ='51600053' ");
+			
+				//}
+			//}
 		}
-		else { 
-			$item_array = array(
-				'maSV'               =>     $_POST["maSV"],  
+	//}
+	
+	
+}
 
-		
-			);
-			
-			$_SESSION["dsdangky"][] = $item_array; //truyền sản phẩm vào trong giỏ
-		}
-	}		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		/*if ($_POST['action'] == "add"){
-			
-			if (isset($_SESSION['dsdangky'])){
-
-				$soluong = 0;
-				foreach ($_SESSION['dsdangky'] as keys => values){
-					
-					if ($_SESSION['dsdangky']['maSV'] == $_POST['maSV']){
-						
-						$soluong++;
-						
-					}
-					
-				}
-				
-				if ($soluong ==0) {
-					
-					$dsdangky_array = array(
-						'maSV'               =>     $_POST["maSV"],  
-						//'tenSV'             =>     $_POST["product_name"], //chua tim duoc cach ket noi csdl hop ly  
-
-
-					);
-					
-					$_SESSION["dsdangky"][] = $dsdangky_array; // truyển sản phẩm vào giỏ hàng
-				
-				}
-						
-			}
-			else{
-				
-				
-				$dsdangky_array = array(
-					'maSV'               =>     $_POST["maSV"],  
-					//'tenSV'             =>     $_POST["product_name"], //chua tim duoc cach ket noi csdl hop ly  
-
-
-				);
-				$_SESSION["dsdangky"][] = $dsdangky_array; // truyển sản phẩm vào giỏ hàng				
-			}
-			
-		}*/
-		
-		
-	}
 }
 	
 ?>

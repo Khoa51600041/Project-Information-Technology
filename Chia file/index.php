@@ -121,7 +121,6 @@
     var index = 0;
     var mang_sinh_vien =  new Array();
     $(document).ready(function(){
-    load_dsdangky(id);    
         function load_data(query) {
             $.ajax({
                 url:"fetch.php",
@@ -147,58 +146,7 @@
         }); 
     });
 	
-	function load_dsdangky(id) {
-		
-		$.ajax({
-			
-			url:"adddangky.php",
-			method:"POST",
-			dataType: "json",
-			success: function(data){
-				
-				$("#result_return"+id).html(data.mssv);
-				
-			},
-			error: function(){
-				
-			alert("error");
-			
-			}
-			
-		});
-			
-	}
-	
-	
-	
-	$(document).on('click','.them', function(){
-		var id = $(this).attr("id");
-		var maDT = $('#maDT'+id).val(); //lưu tên chứa trong hidden input có id = id cua button
-		var maSV = $('.search_text').val(); //lưu tên chứa trong hidden input có id = id cua button
-		var action = "add";
-		
 
-		$.ajax({
-			
-			url:"action.php",
-			method:"POST",
-			//dataType: "json",
-			data:{maDT:maDT, maSV:maSV,action:action},
-			success: function(data){
-				
-				load_dsdangky(id);
-				alert("success");				
-				
-			},
-			error: function(){
-				
-			alert("error");
-			
-			}
-			
-		});
-		
-	});
 	
 	
 	

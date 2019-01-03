@@ -18,6 +18,93 @@
 				
 
 	?>
+	<script>
+			
+		load_dsdangky(<?php echo $data['id']; ?>);    
+		
+		function load_dsdangky(id) {
+		    
+		
+		$.ajax({
+			
+			url:"adddangky.php",
+			method:"POST",
+			dataType: "json",
+			success: function(data){
+				
+				$("#result_return"+id).html(data.mssv);
+				
+			},
+			error: function(){
+				
+			alert("error add");
+			
+			}
+			
+		});
+			
+	}
+	
+	
+	
+	$(document).on('click','.them', function(){
+		var id = $(this).attr("id");
+		var maDT = $('#maDT'+id).val(); //lưu tên chứa trong hidden input có id = id cua button
+		var maSV = $('.search_text').val(); //lưu tên chứa trong hidden input có id = id cua button
+		var action = "add";
+		
+
+		$.ajax({
+			
+			url:"action.php",
+			method:"POST",
+			//dataType: "json",
+			data:{maDT:maDT, maSV:maSV,action:action,id:id},
+			success: function(data){
+				
+				load_dsdangky(id);
+				alert("success");				
+				
+			},
+			error: function(){
+				
+			alert("error action");
+			
+			}
+			
+		});
+		
+	});
+	
+	$(document).on('click','.fa-minus-circle', function(){
+		var del_id = $(this).attr("id");
+		var action = "delete";
+		
+		
+
+		$.ajax({
+			
+			url:"action.php",
+			method:"POST",
+			//dataType: "json",
+			data:{del_id:del_id,action:action},
+			success: function(data){
+				
+				alert("success delete");				
+				
+			},
+			error: function(){
+				
+			alert("error delete");
+			
+			}
+			
+		});
+		
+		
+	});
+	
+	</script>
                     <tbody>
                         <tr>
                             <th scope="row"><?php echo $data['id']; ?></th>
