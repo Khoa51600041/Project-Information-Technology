@@ -9,37 +9,22 @@
 		
 		$maDT = $_POST['maDT'];
 		$maSV = $_POST['maSV'];
-			$dangky_detai = mysqli_query($con, "INSERT INTO dang_ky(maSV, maDT, ngayDK, maNhom, ttDK, ngayTT) 
-			value('$maSV','$maDT',now(),'$maSV','1',now());");	
+			//$dangky_detai = mysqli_query($con, "INSERT INTO dang_ky(maSV, maDT, ngayDK, maNhom, ttDK, ngayTT) 
+			//value('$maSV','$maDT',now(),'$maSV','1',now());");	
 		
 		
-		/*$check = mysqli_query($con, "SELECT * FROM dang_ky")
+		$checksv = mysqli_query($con, "SELECT * FROM sinh_vien where maSV ='$maSV'");
 		
-		if (mysqli_num_rows($check) > 0) {
+		if (mysqli_num_rows($checksv) > 0) {
 		
-					$avaiable = 0;
-			while ($data = mysqli_fetch_array($check)) {
-				
-				if ($data['maSV'] == $maSV) {
-					$avaiable++;
-				}
-				
-				else {
+			
 					$dangky_detai = mysqli_query($con, "INSERT INTO dang_ky(maSV, maDT, ngayDK, maNhom, ttDK, ngayTT) 
 					value('$maSV','$maDT',now(),'$maSV','1',now());");	
 					
-				}
-				
-			}
 			
 		}
 		
-		else {
-			
-			$dangky_detai = mysqli_query($con, "INSERT INTO dang_ky(maSV, maDT, ngayDK, maNhom, ttDK, ngayTT) 
-					value('$maSV','$maDT',now(),'$maSV','1',now());");	
-			
-		}*/
+
 		
 	}
 	
