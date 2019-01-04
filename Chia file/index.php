@@ -73,7 +73,6 @@
 </head>
 
 <body>
-	<div id="kiemtrathu"> o day </div>
     <div class="container-">
         <!-- Header-->
         <?php
@@ -97,20 +96,23 @@
 				?>
 
                 <!-- Đăng kí đề tài -->
-				<?php
 				
-					require('dotdangky.php');
-					require('dkdetai.php');
-
-				?>
+				<!-- dotdangky -->
+				<?php require('dotdangky.php'); ?>
+					
+					
+				<!-- end dotdangky -->
+					<!-- dkdetai -->
+				<?php require('dkdetai.php'); ?>
+					<!-- end dkdetai -->
+				
                 
             </div>
         </div>
 
         <!-- Modal -->
-				<?php
-					require('modal.php');
-				?>
+		<?php require('modal.php'); ?>
+		<!-- end Modal -->
     </div>
 </body>
 </html>
@@ -147,54 +149,6 @@
     });
 	
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	/*$(document).on('click','.them', function(){
-		var id = $(this).attr("id");
-		var maDT = $('#maDT'+id).val(); //lưu tên chứa trong hidden input có id = id cua button
-		var maSV = $('.search_text').val(); //lưu tên chứa trong hidden input có id = id cua button
-		var action = "add";
-		
-
-		$.ajax({
-			
-			url:"adddangky.php",
-			method:"POST",
-			dataType: "json",
-			data:{maDT:maDT, maSV:maSV,action:action},
-			success: function(data){
-				
-				$("#result_return"+id).html(data.mssv);
-				
-			},
-			error: function(){
-				
-			alert("error");
-			
-			}
-			
-		});
-		
-	});*/
 
     /*
     function memory() {

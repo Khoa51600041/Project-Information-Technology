@@ -20,7 +20,7 @@
                             <p class="input-group-addon">Nhập Mã Số Sinh Viên</p>
                             <div class="form-group">
                                 <div class="input-group">
-                                    <input type="text" name="search_text" id="search_text<?php echo $data['id'];?>  placeholder="mã số sinh viên" class="form-control search_text" />
+                                    <input type="text" name="search_text" id="search_text<?php echo $data['id'];?>"  placeholder="mã số sinh viên" class="form-control search_text" />
                                 </div>
                             </div>
                             <div id="add-list"></div>
