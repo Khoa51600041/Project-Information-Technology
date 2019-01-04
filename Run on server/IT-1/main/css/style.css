@@ -1,0 +1,626 @@
+html, body {
+	height: 100%;
+	margin: 0;
+}
+/*Header*/
+.top-content img {
+	width: 105px;
+	height: 70px;
+	float: left;
+	padding-top: 15px;
+	margin-left: 30px;
+}
+#top-title {
+	font-size: 35px;
+	text-align: center;
+	padding-top: 22px;
+	padding-left: 19%;
+	color: #0158A3;
+	float: left;
+}
+
+#user-info {
+	margin-top: 35px;
+	text-align: right;
+	padding-right: 20px;
+}
+
+#user-name, #icon-off {
+	font-size: 19px;
+	font-weight: bold;
+}
+#user-name {
+	padding-right: 20px;
+	color: #0158A3;
+}
+#icon-off {
+	color: #ef4613;
+}
+#hr-top-content {
+	height: 0px;
+	border: none;
+	border-top: 2px solid lightgrey;
+}
+
+/*Menu Left*/
+.sidenav {
+	height: 100%; 
+	width: 250px;
+	position: absolute;
+	z-index: 1; 
+	top: 88px;
+	left: 0;
+	background-color: #0158A3;
+	overflow-x: hidden;
+	padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+	padding:6px 8px 6px 16px;
+	line-height: 40px;
+	text-decoration: none;
+	font-size: 20px;
+	color: white;
+	display: block;
+}
+
+.sidenav a:hover {
+	color: white;
+	text-decoration: none;
+	background-color: #004F93;
+}
+
+.main-content {
+	margin-left: 30px;
+}
+
+/*Đăng kí đề tài*/
+.fa-minus-circle {
+	color: red;
+}
+.fa-plus-circle {
+	color: green;
+}
+
+/*Kết Quả Đăng Kí*/
+#btn-del-signup {
+	background-color: rgb(37, 111, 248);;
+	border: none;
+	border-radius: 10px;
+	color: white;
+	height: 40px;
+}
+.fa-trash-alt {
+	margin-left: 10px;
+	color: red;
+}
+#btn-del-signup:hover {
+	background-color: #004F93;
+}
+
+@media (max-width: 1670px){
+	/*Header*/
+	.top-content img {
+		width: 105px;
+		height: 70px;
+		float: left;
+		padding-top: 15px;
+		margin-left: 30px;
+	}
+	#top-title {
+		font-size: 30px;
+		text-align: center;
+		padding-top: 22px;
+		padding-left: 22%;
+		color: #0158A3;
+		float: left;
+	}
+
+	#user-info {
+		margin-top: 30px;
+		text-align: right;
+		padding-right: 20px;
+	}
+
+	#user-name, #icon-off {
+		font-size: 20px;
+		font-weight: bold;
+	}
+	#user-name {
+		padding-right: 20px;
+		color: #0158A3;
+	}
+	#icon-off {
+		color: #ef4613;
+	}
+	#hr-top-content {
+		height: 0px;
+		border: none;
+		border-top: 2px solid lightgrey;
+	}
+
+	/*Menu Left*/
+	.sidenav {
+		height: 100%; 
+		width: 250px;
+		position: absolute;
+		z-index: 1; 
+		top: 88px;
+		left: 0;
+		background-color: #0158A3;
+		overflow-x: hidden;
+		padding-top: 20px;
+	}
+
+	/* The navigation menu links */
+	.sidenav a {
+		padding:6px 8px 6px 16px;
+		line-height: 40px;
+		text-decoration: none;
+		font-size: 20px;
+		color: white;
+		display: block;
+	}
+
+	.sidenav a:hover {
+		color: white;
+		text-decoration: none;
+		background-color: #004F93;
+	}
+
+	.main-content {
+		margin-left: 100px;
+	}
+	
+	/*Đăng kí đề tài*/
+	.fa-minus-circle {
+		color: red;
+	}
+	.fa-plus-circle {
+		color: green;
+	}
+
+	/*Kết Quả Đăng Kí*/
+	#btn-del-signup {
+		background-color: rgb(37, 111, 248);;
+		border: none;
+		border-radius: 10px;
+		color: white;
+		height: 40px;
+	}
+	.fa-trash-alt {
+		margin-left: 10px;
+		color: red;
+	}
+	#btn-del-signup:hover {
+		background-color: #004F93;
+	}
+}
+
+@media (max-width: 1550px) {
+	/*Header*/
+	.top-content img {
+		width: 105px;
+		height: 70px;
+		float: left;
+		padding-top: 15px;
+		margin-left: 30px;
+	}
+	#top-title {
+		font-size: 29px;
+		text-align: center;
+		padding-top: 22px;
+		padding-left: 20%;
+		color: #0158A3;
+		float: left;
+	}
+
+	#user-info {
+		margin-top: 30px;
+		text-align: right;
+		padding-right: 20px;
+	}
+
+	#user-name, #icon-off {
+		font-size: 18px;
+		font-weight: bold;
+	}
+	#user-name {
+		padding-right: 20px;
+		color: #0158A3;
+	}
+	#icon-off {
+		color: #ef4613;
+	}
+	#hr-top-content {
+		height: 0px;
+		border: none;
+		border-top: 2px solid lightgrey;
+	}
+
+	/*Menu Left*/
+	.sidenav {
+		height: 100%; 
+		width: 200px;
+		position: absolute;
+		z-index: 1; 
+		top: 88px;
+		left: 0;
+		background-color: #0158A3;
+		overflow-x: hidden;
+		padding-top: 20px;
+	}
+
+	/* The navigation menu links */
+	.sidenav a {
+		padding:6px 8px 6px 16px;
+		line-height: 40px;
+		text-decoration: none;
+		font-size: 18px;
+		color: white;
+		display: block;
+	}
+
+	.sidenav a:hover {
+		color: white;
+		text-decoration: none;
+		background-color: #004F93;
+	}
+
+	.main-content {
+		margin-left: 120px;
+	}
+
+	.main-content h1 {
+		font-size: 2rem;
+	}
+
+	.main-content p {
+		font-size: 16px;
+	}
+	
+	/*Đăng kí đề tài*/
+	.fa-minus-circle {
+		color: red;
+	}
+	.fa-plus-circle {
+		color: green;
+	}
+
+	/*Kết Quả Đăng Kí*/
+	#btn-del-signup {
+		background-color: rgb(37, 111, 248);;
+		border: none;
+		border-radius: 10px;
+		color: white;
+		height: 40px;
+	}
+	.fa-trash-alt {
+		margin-left: 10px;
+		color: red;
+	}
+	#btn-del-signup:hover {
+		background-color: #004F93;
+	}
+}
+
+@media (max-width: 1440px) {
+	/*Header*/
+	.top-content img {
+		width: 105px;
+		height: 70px;
+		float: left;
+		padding-top: 15px;
+		margin-left: 30px;
+	}
+	#top-title {
+		font-size: 27px;
+		text-align: center;
+		padding-top: 22px;
+		padding-left: 20%;
+		color: #0158A3;
+		float: left;
+	}
+
+	#user-info {
+		margin-top: 30px;
+		text-align: right;
+		padding-right: 20px;
+	}
+
+	#user-name, #icon-off {
+		font-size: 17px;
+		font-weight: bold;
+	}
+	#user-name {
+		padding-right: 20px;
+		color: #0158A3;
+	}
+	#icon-off {
+		color: #ef4613;
+	}
+	#hr-top-content {
+		height: 0px;
+		border: none;
+		border-top: 2px solid lightgrey;
+	}
+
+	/*Menu Left*/
+	.sidenav {
+		height: 100%; 
+		width: 200px;
+		position: absolute;
+		z-index: 1; 
+		top: 88px;
+		left: 0;
+		background-color: #0158A3;
+		overflow-x: hidden;
+		padding-top: 20px;
+	}
+
+	/* The navigation menu links */
+	.sidenav a {
+		padding:6px 8px 6px 16px;
+		line-height: 40px;
+		text-decoration: none;
+		font-size: 18px;
+		color: white;
+		display: block;
+	}
+
+	.sidenav a:hover {
+		color: white;
+		text-decoration: none;
+		background-color: #004F93;
+	}
+
+	.main-content {
+		margin-left: 120px;
+	}
+
+	.main-content h1 {
+		font-size: 1.8rem;
+	}
+
+	.main-content p {
+		font-size: 16px;
+	}
+	
+	/*Đăng kí đề tài*/
+	.fa-minus-circle {
+		color: red;
+	}
+	.fa-plus-circle {
+		color: green;
+	}
+
+	/*Kết Quả Đăng Kí*/
+	#btn-del-signup {
+		background-color: rgb(37, 111, 248);;
+		border: none;
+		border-radius: 10px;
+		color: white;
+		height: 40px;
+	}
+	.fa-trash-alt {
+		margin-left: 10px;
+		color: red;
+	}
+	#btn-del-signup:hover {
+		background-color: #004F93;
+	}
+}
+
+@media (max-width: 1366px) {
+	/*Header*/
+	.top-content img {
+		width: 105px;
+		height: 70px;
+		float: left;
+		padding-top: 15px;
+		margin-left: 30px;
+	}
+	#top-title {
+		font-size: 26px;
+		text-align: center;
+		padding-top: 22px;
+		padding-left: 20%;
+		color: #0158A3;
+		float: left;
+	}
+
+	#user-info {
+		margin-top: 30px;
+		text-align: right;
+		padding-right: 20px;
+	}
+
+	#user-name, #icon-off {
+		font-size: 18px;
+		font-weight: bold;
+	}
+	#user-name {
+		padding-right: 20px;
+		color: #0158A3;
+	}
+	#icon-off {
+		color: #ef4613;
+	}
+	#hr-top-content {
+		height: 0px;
+		border: none;
+		border-top: 2px solid lightgrey;
+	}
+
+	/*Menu Left*/
+	.sidenav {
+		height: 100%; 
+		width: 200px;
+		position: absolute;
+		z-index: 1; 
+		top: 88px;
+		left: 0;
+		background-color: #0158A3;
+		overflow-x: hidden;
+		padding-top: 20px;
+	}
+
+	/* The navigation menu links */
+	.sidenav a {
+		padding:6px 8px 6px 16px;
+		line-height: 40px;
+		text-decoration: none;
+		font-size: 16px;
+		color: white;
+		display: block;
+	}
+
+	.sidenav a:hover {
+		color: white;
+		text-decoration: none;
+		background-color: #004F93;
+	}
+
+	.main-content {
+		margin-left: 150px;
+	}
+
+	.main-content h1 {
+		font-size: 1.5rem;
+	}
+
+	.main-content p {
+		font-size: 13px;
+	}
+	
+	/*Đăng kí đề tài*/
+	.fa-minus-circle {
+		color: red;
+	}
+	.fa-plus-circle {
+		color: green;
+	}
+
+	/*Kết Quả Đăng Kí*/
+	#btn-del-signup {
+		background-color: rgb(37, 111, 248);;
+		border: none;
+		border-radius: 10px;
+		color: white;
+		height: 40px;
+	}
+	.fa-trash-alt {
+		margin-left: 10px;
+		color: red;
+	}
+	#btn-del-signup:hover {
+		background-color: #004F93;
+	}
+}
+
+@media (max-width: 1270px) {
+	/*Header*/
+	.top-content img {
+		width: 105px;
+		height: 70px;
+		float: left;
+		padding-top: 15px;
+		margin-left: 30px;
+	}
+	#top-title {
+		font-size: 26px;
+		text-align: center;
+		padding-top: 22px;
+		color: #0158A3;
+		float: left;
+	}
+
+	#user-info {
+		margin-top: 40px;
+		text-align: right;
+		padding-right: 20px;
+	}
+
+	#user-name, #icon-off {
+		font-size: 16px;
+		font-weight: bold;
+	}
+	#user-name {
+		padding-right: 20px;
+		color: #0158A3;
+	}
+	#icon-off {
+		color: #ef4613;
+	}
+	#hr-top-content {
+		height: 0px;
+		border: none;
+		border-top: 2px solid lightgrey;
+	}
+
+	/*Menu Left*/
+	.sidenav {
+		height: 100%; 
+		width: 200px;
+		position: absolute;
+		z-index: 1; 
+		top: 108px;
+		left: 0;
+		background-color: #0158A3;
+		overflow-x: hidden;
+		padding-top: 20px;
+	}
+
+	/* The navigation menu links */
+	.sidenav a {
+		padding:6px 8px 6px 16px;
+		line-height: 40px;
+		text-decoration: none;
+		font-size: 16px;
+		color: white;
+		display: block;
+	}
+
+	.sidenav a:hover {
+		color: white;
+		text-decoration: none;
+		background-color: #004F93;
+	}
+
+	.main-content {
+		margin-left: 170px;
+	}
+
+	.main-content h1 {
+		font-size: 1.5rem;
+	}
+
+	.main-content p {
+		font-size: 13px;
+	}
+	
+	/*Đăng kí đề tài*/
+	.fa-minus-circle {
+		color: red;
+	}
+	.fa-plus-circle {
+		color: green;
+	}
+
+	/*Kết Quả Đăng Kí*/
+	#btn-del-signup {
+		background-color: rgb(37, 111, 248);;
+		border: none;
+		border-radius: 10px;
+		color: white;
+		height: 40px;
+	}
+	.fa-trash-alt {
+		margin-left: 10px;
+		color: red;
+	}
+	#btn-del-signup:hover {
+		background-color: #004F93;
+	}
+}
