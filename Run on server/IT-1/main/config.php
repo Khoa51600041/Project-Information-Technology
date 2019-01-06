@@ -13,14 +13,14 @@
     $user_data = $_SESSION['userData'];
     
     $user_name = '';
-    $icon_action = '';
     if(isset($_SESSION['gv'])){
         $user_name = $user_data['tenGV']; 
-        $icon_action_table_1 = '<a href="#"><i class="fas fa-check"></i></a><span>/</span><a href="#"><i class="fas fa-edit"></i></a><span>/</span><a href="#"><i class="fas fa-trash-alt"></i></a>'; 
-        $icon_action_table_2 = '<a href="#"><i class="fas fa-check"></i></a><span>/</span><a href="#"><i class="fas fa-times"></i></a>'; 
+        $icon_gv_register_1 = '<a href="#"><i class="fas fa-check"></i></a><span>/</span><a href="#"><i class="fas fa-edit"></i></a><span>/</span><a href="#"><i class="fas fa-trash-alt"></i></a>'; 
+        $icon_gv_result_register_2 = '<a href="#"><i class="fas fa-check"></i></a><span>/</span><a href="#"><i class="fas fa-times"></i></a>'; 
     }else if(isset($_SESSION['sv'])){ //Phân Quyền truy cập: icon cho bảng đề tài
         $user_name = $user_data['tenSV'];
-        $icon_action_table_1 = '<a href="#"><i class="fas fa-check"></i></a><span>/</span><a href="#"><i class="fas fa-redo-alt"></i></a>';
+        $icon_sv_register_1  = '<a href="#"><i class="fas fa-check"></i></a><span>/</span><a href="#"><i class="fas fa-redo-alt"></i></a>';
+        $icon_sv_result_register_2 = '<a href="#"><i class="fas fa-check"></i></a><span>/</span><a href="#"><i class="fas fa-times"></i></a>';
     }else {
     ?>
     <script language="javascript" type="text/javascript">

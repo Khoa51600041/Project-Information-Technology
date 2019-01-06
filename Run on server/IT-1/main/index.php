@@ -48,7 +48,7 @@ require 'config.php';
                 <div class="col-sm-3">
                     <div id="user-info">
                         <span id="user-name"><?php echo $user_name; ?></span>
-                        <a href="/login/logout.php"> <!-- Fix trả về logout -->
+                        <a href="/login/logout.php"> <!-- Nếu chạy trên server thì xoá đoạn trước /login-->
                             <span id="icon-off">
                                 <i class="fas fa-power-off"></i>
                             </span>
@@ -71,9 +71,6 @@ require 'config.php';
                 echo '';
             }
             ?>
-            
-            
-            
         </div>
 
 
@@ -82,26 +79,7 @@ require 'config.php';
                 <!-- Trang Chủ-->
                 <div class="home-page">
                     <h1>Thông báo</h1>
-                    <p>Maecenas erat diam, mollis non sem ut, mollis dignissim est. Pellentesque tempus, ex id mattis
-                        bibendum, nisl augue scelerisque augue, eget lacinia eros tellus sit amet urna. Aenean sodales
-                        cursus facilisis. Nulla dignissim lorem non urna euismod viverra sed id nunc. Pellentesque
-                        sollicitudin justo vel massa interdum volutpat. Praesent at neque condimentum, dignissim tellus
-                        ut, cursus ligula. Integer nec bibendum justo, lacinia vehicula sem. Aenean nec mauris lacinia,
-                        maximus tortor vel, venenatis ligula. Quisque suscipit interdum nisl, at lobortis ligula
-                        pellentesque sed. Sed enim sapien, porttitor ac odio ut, placerat volutpat purus. Vestibulum
-                        vitae augue a nunc commodo gravida. Sed quis porttitor dolor, id eleifend libero. Praesent
-                        viverra vehicula porta. In in est in sem posuere rhoncus. Sed a turpis vitae turpis facilisis
-                        imperdiet.
-
-                        Cras convallis nisl ligula, at feugiat felis bibendum in. Sed ipsum arcu, placerat at suscipit
-                        et, hendrerit ut arcu. Vivamus vestibulum, leo in pellentesque tempor, odio enim tempus lectus,
-                        quis volutpat mi justo vitae felis. Phasellus eget facilisis magna, nec tincidunt tellus. In
-                        elementum mi vel nunc eleifend, at venenatis eros sollicitudin. Cras sed feugiat eros. Morbi a
-                        enim pulvinar, dignissim justo at, tempor risus. Sed risus nunc, dapibus et magna quis,
-                        dignissim tempus justo. Sed quis nisi varius, pharetra augue a, ultricies massa. Sed quis
-                        aliquam lorem. Nam laoreet posuere velit eget porttitor. Pellentesque orci nunc, pretium id
-                        tempor a, pharetra at tellus. Vestibulum luctus dolor a enim pharetra porta. Vivamus eleifend
-                        est a purus hendrerit, quis aliquam ipsum elementum.
+                    <p>Nội dung thông báo
                     </p>
                 </div>
 
@@ -143,7 +121,13 @@ require 'config.php';
                             <td>2/3</td>
                             <td>
                                 <?php
-                                    echo $icon_action_table_1;
+                                    if(isset($_SESSION['gv'])){
+                                        echo $icon_gv_register_1;;
+                                    }else if(isset($_SESSION['sv'])){
+                                        echo $icon_sv_register_1;
+                                    }else {
+                                        echo '';
+                                    }
                                 ?>
                             </td>
                         </tr>
@@ -165,9 +149,9 @@ require 'config.php';
                             <th scope="col">Trạng Thái</th>
                             <?php
                             if(isset($_SESSION['gv'])){
-                                echo '<th scope="col">Thao Tác</th>';
-                            }else {
-                                echo '';
+                                echo '<th scope="col">Duyệt / Không Duyệt</th>';
+                            }else if(isset($_SESSION['sv'])){
+                                echo '<th scope="col">Xác Nhận / Không Xác Nhận</th>';
                             }
                             ?>
                         </tr>
@@ -187,10 +171,10 @@ require 'config.php';
                             <?php
                             if(isset($_SESSION['gv'])){
                                 echo '<td>';
-                                    echo $icon_action_table_2;
+                                    echo $icon_gv_result_register_2;
                                 echo '</td>';
                             }else {
-                                echo '';
+                                echo $icon_sv_result_register_2;
                             }
                             
                             ?>
