@@ -133,7 +133,7 @@ require 'config.php';
                                 <p id="result-return"></p>
                                 
                                 <?php
-                                if(isset($_SESSION['sv'])){ sao cái index này là file chạy cho server đừng sửa, sửa bên file m á
+                                if(isset($_SESSION['sv'])){
 									echo '<a href="#"><i class="fas fa-plus-circle" data-toggle="modal" data-target="#addModal"></i></a>';
                                 }else {
                                     echo '';
